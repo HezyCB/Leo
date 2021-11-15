@@ -24,8 +24,8 @@ while True:
     try:
         bot_input = input()
 
-        if bot_input.strip()=='Stop':
-            print('Neon: Bye')
+        if bot_input.strip()=='Bye':
+            print('Neon: Shutting Down')
             break
 
         bot_response = chatbot.get_response(bot_input)
