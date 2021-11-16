@@ -2,7 +2,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
-# Create a new ChatBot with name Dev.to
+# Create a new ChatBot with name Neon
 chatbot = ChatBot(
     'Neon',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
