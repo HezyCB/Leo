@@ -1,5 +1,3 @@
-import pyttsx3
-import SpeechRecognition as sr
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
@@ -24,26 +22,6 @@ trainer.train("chatterbot.corpus.english")
 print("\nHello there, Im Neon and I am at your service:\n")
 while True:
     try:
-      r = sr.Recognizer()                                     
-      with sr.Microphone() as source:                        
-        audio = r.listen(source)   
-        try:
-          bot_input = (r.recognize_google(audio))
-        except sr.UnknownValueError:
-          print("Could not understand audio")
-        except sr.RequestError as e:
-          print("Could not request results; {0}".format(e))
-        bot_input = (r.recognize_google(audio))
-        r = sr.Recognizer()
-
-# Function to convert text to
-# speech
-        def SpeakText(bot_response):
-          
-          # Initialize the engine
-          engine = pyttsx3.init()
-          engine.say(bot_response)
-          engine.runAndWait()
         if bot_input.strip()=='Bye':
             print('Neon: Bye')
             break
